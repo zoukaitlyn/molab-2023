@@ -13,9 +13,10 @@ var images = ["rectangle",
 
 struct ContentView: View {
 
+// allows us to modify values inside a struct
 @State var random: String = ""
-@State private var imagePosition = CGPoint(x: 100, y: 100)
-@State private var imageSize = CGSize(width: 100, height: 100)
+@State var imagePosition = CGPoint(x: 100, y: 100)
+@State var imageSize = CGSize(width: 100, height: 100)
 let screenSize = UIScreen.main.bounds.size
 
 var body: some View {
@@ -58,6 +59,7 @@ var body: some View {
 
 func chooseRandomImage() -> String {
     let array = images
+    // an optional is a var or constant that can hold a value or no value
     // ! means an optional is being unwrapped
     let result = array.randomElement()!
     return result
