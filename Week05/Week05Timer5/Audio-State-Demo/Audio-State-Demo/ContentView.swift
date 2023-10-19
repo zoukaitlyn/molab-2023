@@ -36,7 +36,7 @@ struct ContentView: View {
                         Text("15 Second Timer")
                         .font(Font.custom("Chivo", size: 24))
                     }
-                    NavigationLink (destination: Alarm2()) {
+                    NavigationLink (destination: Alarm1(timeRemaining: 30)) {
                         Text("30 Second Timer")
                         .font(Font.custom("Chivo", size: 24))
                     }
