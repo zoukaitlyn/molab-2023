@@ -1,5 +1,4 @@
-{
-    "colors": [
+[
       {
         "name": "black",
         "category": "hue",
@@ -54,5 +53,4 @@
         }
       }
     ]
-  }
   
