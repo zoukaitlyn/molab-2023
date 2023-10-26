@@ -1,0 +1,71 @@
+[
+      {
+        "name": "black",
+        "category": "hue",
+        "type": "shade",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 1,
+        "rgba": [255,255,255,1],
+        "hex": "#000"
+        
+      },
+      {
+        "name": "white",
+        "category": "value",
+        "type": "shade",
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 1,
+        "rgba": [0,0,0,1],
+        "hex": "#FFF"
+      },
+      {
+        "name": "red",
+        "category": "hue",
+        "type": "primary",
+        "r": 255,
+        "g": 0,
+        "b": 0,
+        "a": 1,
+        "rgba": [255,0,0,1],
+        "hex": "#FF0"
+      },
+      {
+        "name": "blue",
+        "category": "hue",
+        "type": "primary",
+        "r": 0,
+        "g": 0,
+        "b": 255,
+        "a": 1,
+        "rgba": [0,0,255,1],
+        "hex": "#00F"
+        
+      },
+      {
+        "name": "yellow",
+        "category": "hue",
+        "type": "primary",
+        "r": 255,
+        "g": 255,
+        "b": 0,
+        "a": 1,
+        "rgba": [255,255,0,1],
+        "hex": "#FF0"
+      },
+      {
+        "name": "green",
+        "category": "hue",
+        "type": "secondary",
+        "r": 0,
+        "g": 255,
+        "b": 0,
+        "a": 1,
+        "rgba": [0,255,0,1],
+        "hex": "#0F0"
+      }
+    ]
+  
