@@ -10,13 +10,18 @@ struct Colors: Codable {
     let colors: [Color]
 }
 
-struct Color: Codable {
-    let name, category: String
-    let type: String?
-    let code: Code
+struct Color: Codable, Hashable {
+    let name, category, type: String
+    let r, g, b, a: Int
+    let rgba: [Int]
+    let hex: String
     
     static let allColors: [Color] = Bundle.main.decode(file: "colors.json")
     static let sampleColor: Color = allColors[0]
+    
+    #if DEBUG
+    static let example = Color(name: "red", category: "hue", type: "primary", r: 255, g: 0, b: 0, a:1, rgba: [255,0,0,1], hex: "#FF0")
+    #endif
 }
 
 struct Code: Codable {
