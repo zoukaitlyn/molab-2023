@@ -42,7 +42,7 @@ struct ItemDetail: View {
             }
             
 //            Circle()
-//            Circle().fill(Color(.red))
+//            Circle().fill(Color(k))
 //                .foregroundStyle(.red)
 //                .foregroundColor()
 //                .fill(Color(red: 242, green: 242, blue: 242))
