@@ -14,11 +14,15 @@ struct ContentView: View {
         TabView{
             AllColorsView()
                 .tabItem {
-                    Label("All", systemImage: "circle.fill")
+                    Label("Explore", systemImage: "circle.fill")
                 }
             BasicColorView()
                 .tabItem {
                     Label("Basic", systemImage: "heart.fill")
+                }
+            BasicEditableProfileView(profile: Profile(firstName: "Tim", title: "Graphic Designer", city: "Cupertino"))
+                .tabItem {
+                    Label("Profile", systemImage: "heart.fill")
                 }
         }
     }

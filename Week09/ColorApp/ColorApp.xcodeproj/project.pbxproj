@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B272E312AFC08F3005EFAC9 /* AllColorsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B272E302AFC08F3005EFAC9 /* AllColorsItem.swift */; };
+		1B275A452B05B74200B81FEB /* BasicEditableProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B275A442B05B74200B81FEB /* BasicEditableProfileView.swift */; };
 		1B3AD46F2AFC038700EEB64B /* color-names.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B3AD46E2AFC038700EEB64B /* color-names.json */; };
 		1BCA96592AFC901300E82482 /* AllColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA96582AFC901300E82482 /* AllColorsView.swift */; };
 		1BCA965B2AFCAA2D00E82482 /* BasicColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA965A2AFCAA2D00E82482 /* BasicColorView.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1B272E302AFC08F3005EFAC9 /* AllColorsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllColorsItem.swift; sourceTree = "<group>"; };
+		1B275A442B05B74200B81FEB /* BasicEditableProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEditableProfileView.swift; sourceTree = "<group>"; };
 		1B3AD46E2AFC038700EEB64B /* color-names.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "color-names.json"; sourceTree = "<group>"; };
 		1BCA96582AFC901300E82482 /* AllColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllColorsView.swift; sourceTree = "<group>"; };
 		1BCA965A2AFCAA2D00E82482 /* BasicColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicColorView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				1BE8F15B2AFB2D07001948D8 /* ColorAppApp.swift */,
 				1BE8F15D2AFB2D07001948D8 /* ContentView.swift */,
+				1B275A442B05B74200B81FEB /* BasicEditableProfileView.swift */,
 				1BCA965C2AFCAC0800E82482 /* AllColorsDetail.swift */,
 				1BE8F16F2AFB354F001948D8 /* ItemDetail.swift */,
 				1BE8F1712AFB37E8001948D8 /* RandomColor.swift */,
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B275A452B05B74200B81FEB /* BasicEditableProfileView.swift in Sources */,
 				1BE8F15E2AFB2D07001948D8 /* ContentView.swift in Sources */,
 				1BE8F16C2AFB30C6001948D8 /* JSONManager.swift in Sources */,
 				1BE8F15C2AFB2D07001948D8 /* ColorAppApp.swift in Sources */,

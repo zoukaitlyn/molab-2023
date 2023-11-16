@@ -12,7 +12,7 @@ struct AllColorsItem: View {
 
     var body: some View {
         ZStack{
-            Rectangle()
+            RoundedRectangle(cornerRadius: 10)
                 .fill(Color(hex: item.hex))
                 .frame(width: 400, height: 120)
             HStack{
