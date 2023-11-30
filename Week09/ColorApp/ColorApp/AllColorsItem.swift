@@ -12,18 +12,30 @@ struct AllColorsItem: View {
 
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 9)
                 .fill(Color(hex: item.hex))
-                .frame(width: 400, height: 120)
+                .frame(width: 320, height: 120)
+            HStack{
+                VStack(alignment: .leading){
+                    RoundedRectangle(cornerRadius: 9)
+                        .fill(Color.black.opacity(0.2))
+                        .frame(width: 170, height: 40)
+                        .padding(.leading, 20)
+                        .padding(.top, 55)
+
+                }
+                Spacer()
+            }
             HStack{
                 VStack(alignment: .leading){
                     Text(item.name)
                         .font(.headline)
                         .foregroundStyle(.white)
-                    Text(item.hex)
-                        .foregroundStyle(.white)
+//                    Text(item.hex)
+//                        .foregroundStyle(.white)
                 }
-                .padding(.leading, 40)
+                .padding(.top, 55)
+                .padding(.leading, 30)
                 Spacer()
             }
         }

@@ -13,7 +13,7 @@ struct RandomColor: View {
 
     var body: some View {
         VStack{
-            Rectangle()
+            RoundedRectangle(cornerRadius: 6)
                 .fill(Color(red: Double(randomDoubleR/255), green: Double(randomDoubleG/255), blue: Double(randomDoubleB/255)))
                 .frame(width: 300, height: 300)
             Text("rgb(\(Int(randomDoubleR)), \(Int(randomDoubleG)), \(Int(randomDoubleB)))")

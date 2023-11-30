@@ -13,20 +13,19 @@ struct AllColorsView: View {
         NavigationStack{
             List{
                 ForEach(colorName, id: \.name){ color in
-                    NavigationLink(value: colorName){
+                    NavigationLink(value: color){
                         AllColorsItem(item: color)
                     }
                 }
                 .listRowSeparator(.hidden)
-                .listRowInsets(.init(top: 0, leading: 30, bottom: 0, trailing: 30))
+//                .scrollContentBackground(.hidden)
+                .listRowInsets(.init(top: 10, leading: 30, bottom: 0, trailing: 30))
             }
+            .navigationTitle("All Colors")
             .navigationDestination(for: JColorName.self){ item in
                 AllColorsDetail(item: item)
 
             }
-            .navigationTitle("All Colors")
-
-
         }
     }
 }

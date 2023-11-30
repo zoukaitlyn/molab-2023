@@ -1,0 +1,29 @@
+[
+      {
+        "name": "Red",
+        "hex": "FF0000",
+        "fact": "One of the oldest red pigments is called hematite, and it comes from the mineral form of iron oxide–essentially rust. It’s very common in the earth’s crust and found throughout the world. Cochineal is another pigment of red that’s derived from a scale insect of the same name. It took around 70,000 of these bugs to get one pound of raw cochineal dye. This pigment is actually still used today in food and cosmetics under the label E120."
+      },
+      {
+          "name": "Purple",
+          "hex": "660066",
+          "fact": "Tyrian purple was originally derived from two varieties of shellfish found in the Mediterranean, produced by a pale gland in its body. When squeezed or prodded, this gland produces a single drop of clear garlic-smelling liquid that when exposed to sunlight, turns from green to blue, and then finally to a dark reddish purple. It took 250,000 shellfish to produce one ounce of dye, and these shellfish were hunted to the point of near extinction."
+      },
+      {
+          "name": "Green",
+          "hex": "00CC00",
+          "fact": "This green pigment was derived from a compound copper arsenite which is incredibly toxic — and  that a piece of Scheele’s green wallpaper that was only a few inches long had enough arsenic to kill two adults. It’s been rumored that Scheele’s green’s most famous victim could have been Napoleon. The French leader had a lot of arsenic in his system when he died."
+      },
+      {
+          "name": "Blue",
+          "hex": "0000FF",
+          "fact": "Ultramarine is a beautiful deep dark blue that looks almost like the night sky. In modern culture, we tend to think of blue as associated with boys and pink associated with girls, but if you go back a century and a half, it was quite the opposite. Blue was viewed as a feminine color because of its association with the Virgin Mary while pink was seen as a lighter shade of red, and viewed as a more masculine color."
+        
+      },
+      {
+          "name": "Black",
+          "hex": "000000",
+          "fact": "Vantablack is an acronym for vertically aligned carbon nanotube arrays, and technically it is not really a color at all. Instead, it’s a substance that absorbs more light than anything else in the world."
+      }
+    ]
+  

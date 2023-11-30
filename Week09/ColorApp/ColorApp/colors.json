@@ -1,8 +1,8 @@
 [
       {
-        "name": "black",
-        "category": "hue",
-        "type": "shade",
+        "name": "Black",
+        "category": "Hue",
+        "type": "Shade",
         "r": 0,
         "g": 0,
         "b": 0,
@@ -12,9 +12,9 @@
         
       },
       {
-        "name": "white",
-        "category": "value",
-        "type": "shade",
+        "name": "White",
+        "category": "Value",
+        "type": "Shade",
         "r": 255,
         "g": 255,
         "b": 255,
@@ -23,9 +23,9 @@
         "hex": "#FFF"
       },
       {
-        "name": "red",
-        "category": "hue",
-        "type": "primary",
+        "name": "Red",
+        "category": "Hue",
+        "type": "Primary",
         "r": 255,
         "g": 0,
         "b": 0,
@@ -34,9 +34,9 @@
         "hex": "#FF0"
       },
       {
-        "name": "blue",
-        "category": "hue",
-        "type": "primary",
+        "name": "Blue",
+        "category": "Hue",
+        "type": "Primary",
         "r": 0,
         "g": 0,
         "b": 255,
@@ -46,9 +46,9 @@
         
       },
       {
-        "name": "yellow",
-        "category": "hue",
-        "type": "primary",
+        "name": "Yellow",
+        "category": "Hue",
+        "type": "Primary",
         "r": 255,
         "g": 255,
         "b": 0,
@@ -57,9 +57,9 @@
         "hex": "#FF0"
       },
       {
-        "name": "green",
-        "category": "hue",
-        "type": "secondary",
+        "name": "Green",
+        "category": "Hue",
+        "type": "Secondary",
         "r": 0,
         "g": 255,
         "b": 0,

@@ -18,11 +18,11 @@ struct ContentView: View {
                 }
             BasicColorView()
                 .tabItem {
-                    Label("Basic", systemImage: "heart.fill")
+                    Label("Basic", systemImage: "circle.fill")
                 }
             BasicEditableProfileView(profile: Profile(firstName: "Tim", title: "Graphic Designer", city: "Cupertino"))
                 .tabItem {
-                    Label("Profile", systemImage: "heart.fill")
+                    Label("Profile", systemImage: "circle.fill")
                 }
         }
     }

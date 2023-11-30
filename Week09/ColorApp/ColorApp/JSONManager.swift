@@ -26,7 +26,7 @@ struct JColor: Codable, Hashable {
     static let sampleColor: JColor = allColors[0]
     
     #if DEBUG
-    static let example = JColor(name: "red", category: "hue", type: "primary", r: 255, g: 0, b: 0, a:1, rgba: [255,0,0,1], hex: "#FF0")
+    static let example = JColor(name: "Red", category: "Hue", type: "Primary", r: 255, g: 0, b: 0, a:1, rgba: [255,0,0,1], hex: "#FF0")
     #endif
 }
 
@@ -51,6 +51,11 @@ struct JColorName: Codable, Hashable {
 
 typealias JColorNames = [JColorName]
 
+struct ColorHistoryFact: Codable {
+    let name, hex, fact: String
+}
+
+typealias ColorHistory = [ColorHistoryFact]
 
 extension Bundle {
     func decode<T: Decodable>(file: String) -> T {

@@ -26,7 +26,7 @@ struct BasicEditableProfileView: View {
                 if mode.isEditing {
                     editFormView()
                 } else {
-                    VStack{
+                    VStack(alignment: .leading){
                         HStack{
                             Text(profile.firstName)
                                 .bold()
@@ -36,10 +36,13 @@ struct BasicEditableProfileView: View {
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(Color(red: 199/255, green: 212/255, blue: 242/255))
+                                .fill(Color(red: 19/255, green: 60/255, blue: 150/255))
                                 .frame(width: 200, height: 30)
                             Text(profile.title)
+                                .foregroundStyle(.white)
                         }
+                        .padding(.leading, 5)
+
                         
                         
                         ZStack(alignment: .top){
@@ -51,10 +54,10 @@ struct BasicEditableProfileView: View {
                                 HStack {
                                     Text("My Colors")
                                         .bold()
-                                        .font(.largeTitle)
+                                        .font(.system(size: 25))
                                     Spacer()
                                 }
-                                .padding(.leading, 25)
+                                .padding(.leading, 20)
                                 .padding(.top, 15)
                                 
                                 ZStack{
@@ -66,7 +69,7 @@ struct BasicEditableProfileView: View {
                                         Text("Red")
                                             .font(.headline)
                                             .foregroundStyle(.white)
-                                        Text("item.hex")
+                                        Text("#aa0000")
                                             .foregroundStyle(.white)
                                     }
                                 }
@@ -81,17 +84,16 @@ struct BasicEditableProfileView: View {
                             HStack {
                                 Text("My Color Palettes")
                                     .bold()
-                                    .font(.largeTitle)
+                                    .font(.system(size: 25))
                                 Spacer()
                             }
-                            .padding(.leading, 25)
+                            .padding(.leading, 20)
                             .padding(.top, 15)
                         }
                         
                         
                         Spacer()
                     }
-                    
                     
 //                    formView()
                 }
@@ -105,14 +107,12 @@ struct BasicEditableProfileView: View {
 
     fileprivate func formView() -> some View {
         return Form{
-
             Section(header: Text("My info")) {
                 HStack {
                     Text("First name:")
                     Spacer()
                     Text(profile.firstName).foregroundColor(.secondary)
                 }
-
 
                 HStack {
                     Text("Last name:")
@@ -126,16 +126,13 @@ struct BasicEditableProfileView: View {
                     Text(profile.city).foregroundColor(.secondary)
                 }
             }
-
         }
-        
     }
 
     fileprivate func editFormView() -> some View {
         return Form{
             Section(header: Text("First name")) {
                 TextField("first name",text: $profile.firstName)
-
             }
             Section(header: Text("Title")) {
                 TextField("Title",text: $profile.title)
