@@ -7,11 +7,11 @@
 import SwiftUI
 
 struct AllColorsDetail: View {
+    @EnvironmentObject var collection: Collection
     let item: JColorName
     var color1 = hexStringToUIColor(hex: "#d3d3d3")
-
+    
     var body: some View {
-
         VStack{
             ZStack(alignment: .leading){
                 RoundedRectangle(cornerRadius: 6)
@@ -91,6 +91,13 @@ struct AllColorsDetail: View {
 
                 }
                 
+                Button("Add to My Colors") {
+                    collection.add(item: item)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.black)
+                .padding(.top, 20)
+                
                 Spacer()
             }
             .frame(width: 300)
@@ -104,6 +111,7 @@ struct AllColorsDetail: View {
 
 #Preview {
     AllColorsDetail(item: JColorName.example)
+        .environmentObject(Collection())
 }
 
 // convert hex to UIColor

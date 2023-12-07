@@ -13,15 +13,25 @@ struct ItemDetail: View {
      
     var body: some View {
         VStack{
-            ZStack(alignment: .leading){
+            ZStack{
                 RoundedRectangle(cornerRadius: 6)
                     .fill(Color(red: Double(item.r/255), green: Double(item.g/255), blue: Double(item.b/255)))
                     .frame(width: 350, height: 200)
-                Text(item.name)
-                    .padding(.top, 130)
-                    .padding(.leading, 20)
-                    .font(.system(size: 40))
-                    .foregroundStyle(.white)
+                HStack{
+                    VStack(alignment: .leading){
+                        Text(item.name)
+                            .font(.system(size: 40))
+                            .padding(5)
+                            .foregroundStyle(.white)
+                            .background(Color.black.opacity(0.2))
+                            .cornerRadius(9)
+                            
+                    }
+                    .padding(.top, 120)
+                    .padding(.leading, 35)
+                    Spacer()
+                }
+                
             }
                         
             VStack(alignment: .leading){
@@ -96,6 +106,7 @@ struct ItemDetail: View {
                                     blue: Double(item.b + Int(Double((255 - item.b)) * 0.9)) / 255.0))
                         .frame(width: 50, height: 50)
                 }
+                
                 Spacer()
 
             }

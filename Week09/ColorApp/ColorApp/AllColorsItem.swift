@@ -17,25 +17,15 @@ struct AllColorsItem: View {
                 .frame(width: 320, height: 120)
             HStack{
                 VStack(alignment: .leading){
-                    RoundedRectangle(cornerRadius: 9)
-                        .fill(Color.black.opacity(0.2))
-                        .frame(width: 170, height: 40)
-                        .padding(.leading, 20)
-                        .padding(.top, 55)
-
-                }
-                Spacer()
-            }
-            HStack{
-                VStack(alignment: .leading){
                     Text(item.name)
                         .font(.headline)
+                        .padding(10)
                         .foregroundStyle(.white)
-//                    Text(item.hex)
-//                        .foregroundStyle(.white)
+                        .background(Color.black.opacity(0.2))
+                        .cornerRadius(9)
                 }
                 .padding(.top, 55)
-                .padding(.leading, 30)
+                .padding(.leading, 10)
                 Spacer()
             }
         }

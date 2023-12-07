@@ -10,6 +10,7 @@
 		1B272E312AFC08F3005EFAC9 /* AllColorsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B272E302AFC08F3005EFAC9 /* AllColorsItem.swift */; };
 		1B275A452B05B74200B81FEB /* BasicEditableProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B275A442B05B74200B81FEB /* BasicEditableProfileView.swift */; };
 		1B3AD46F2AFC038700EEB64B /* color-names.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B3AD46E2AFC038700EEB64B /* color-names.json */; };
+		1B5EB3742B212ED200ABA5C0 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EB3732B212ED200ABA5C0 /* Collection.swift */; };
 		1BC783D12B17F88000914900 /* TriadColorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC783D02B17F88000914900 /* TriadColorTest.swift */; };
 		1BC783D32B1800E900914900 /* MonochromaticColorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC783D22B1800E900914900 /* MonochromaticColorTest.swift */; };
 		1BC783D72B18160300914900 /* color-history.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BC783D62B18160300914900 /* color-history.json */; };
@@ -31,6 +32,7 @@
 		1B272E302AFC08F3005EFAC9 /* AllColorsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllColorsItem.swift; sourceTree = "<group>"; };
 		1B275A442B05B74200B81FEB /* BasicEditableProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEditableProfileView.swift; sourceTree = "<group>"; };
 		1B3AD46E2AFC038700EEB64B /* color-names.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "color-names.json"; sourceTree = "<group>"; };
+		1B5EB3732B212ED200ABA5C0 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1BC783D02B17F88000914900 /* TriadColorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadColorTest.swift; sourceTree = "<group>"; };
 		1BC783D22B1800E900914900 /* MonochromaticColorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromaticColorTest.swift; sourceTree = "<group>"; };
 		1BC783D62B18160300914900 /* color-history.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "color-history.json"; sourceTree = "<group>"; };
@@ -82,11 +84,12 @@
 				1BE8F15B2AFB2D07001948D8 /* ColorAppApp.swift */,
 				1BE8F15D2AFB2D07001948D8 /* ContentView.swift */,
 				1B275A442B05B74200B81FEB /* BasicEditableProfileView.swift */,
-				1BCA965C2AFCAC0800E82482 /* AllColorsDetail.swift */,
 				1BE8F16F2AFB354F001948D8 /* ItemDetail.swift */,
+				1B5EB3732B212ED200ABA5C0 /* Collection.swift */,
 				1BC783D22B1800E900914900 /* MonochromaticColorTest.swift */,
 				1BC783D02B17F88000914900 /* TriadColorTest.swift */,
 				1BE8F1712AFB37E8001948D8 /* RandomColor.swift */,
+				1BCA965C2AFCAC0800E82482 /* AllColorsDetail.swift */,
 				1B272E302AFC08F3005EFAC9 /* AllColorsItem.swift */,
 				1BCA96582AFC901300E82482 /* AllColorsView.swift */,
 				1BE8F16D2AFB32F5001948D8 /* ItemRow.swift */,
@@ -187,6 +190,7 @@
 				1BE8F16C2AFB30C6001948D8 /* JSONManager.swift in Sources */,
 				1BE8F15C2AFB2D07001948D8 /* ColorAppApp.swift in Sources */,
 				1BE8F1702AFB354F001948D8 /* ItemDetail.swift in Sources */,
+				1B5EB3742B212ED200ABA5C0 /* Collection.swift in Sources */,
 				1BCA96592AFC901300E82482 /* AllColorsView.swift in Sources */,
 				1BCA965B2AFCAA2D00E82482 /* BasicColorView.swift in Sources */,
 				1BE8F1722AFB37E8001948D8 /* RandomColor.swift in Sources */,

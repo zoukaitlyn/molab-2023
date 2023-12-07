@@ -15,10 +15,11 @@ struct Profile {
 }
 
 struct BasicEditableProfileView: View {
+    @EnvironmentObject var collection: Collection
     @State var profile: Profile
     @State var mode: EditMode = .inactive
     @Namespace private var namespace
-
+    
 
     var body: some View {
         NavigationView {
@@ -29,6 +30,7 @@ struct BasicEditableProfileView: View {
                     VStack(alignment: .leading){
                         HStack{
                             Text(profile.firstName)
+                                .foregroundStyle(.black)
                                 .bold()
                                 .font(.largeTitle)
                             Spacer()
@@ -36,20 +38,13 @@ struct BasicEditableProfileView: View {
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(Color(red: 19/255, green: 60/255, blue: 150/255))
+                                .fill(Color(red: 178/255, green: 255/255, blue: 102/255))
                                 .frame(width: 200, height: 30)
                             Text(profile.title)
-                                .foregroundStyle(.white)
                         }
                         .padding(.leading, 5)
-
-                        
                         
                         ZStack(alignment: .top){
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color(red: 235/255, green: 238/255, blue: 242/255))
-                                .frame(width: 350, height: 200)
-                            
                             VStack(alignment: .leading){
                                 HStack {
                                     Text("My Colors")
@@ -60,38 +55,44 @@ struct BasicEditableProfileView: View {
                                 .padding(.leading, 20)
                                 .padding(.top, 15)
                                 
-                                ZStack{
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .fill(.red)
-                                        .frame(width: 80, height: 80)
-                                    
-                                    VStack(alignment: .leading){
-                                        Text("Red")
-                                            .font(.headline)
-                                            .foregroundStyle(.white)
-                                        Text("#aa0000")
-                                            .foregroundStyle(.white)
+                                VStack{
+                                    List{
+                                        ForEach(collection.items, id: \.self){ item in
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(Color(hex: item.hex))
+                                                    .frame(width: 340, height: 80)
+                                                HStack{
+                                                    VStack(alignment: .leading){
+                                                        Text(item.name)
+                                                            .font(.headline)
+                                                            .padding(10)
+                                                            .foregroundStyle(.white)
+                                                            .background(Color.black.opacity(0.2))
+                                                            .cornerRadius(9)
+                                                    }
+                                                    .padding(.top, 30)
+                                                    .padding(.leading, 10)
+                                                    Spacer()
+                                                    
+                                                }
+                                                
+                                                
+                                            }
+                                        
+                                        }
+                                        .onDelete(perform: deleteItems)
                                     }
+                                    .listStyle(PlainListStyle())
+                                    .listRowSeparator(.hidden)
+//                                    .toolbar {
+//                                        EditButton()
+//                                    }
+
                                 }
-                                .padding(.leading, 20)
+//                                .padding(.leading, 20)
                             }
                         }
-                        
-                        ZStack(alignment: .top){
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color(red: 235/255, green: 238/255, blue: 242/255))
-                                .frame(width: 350, height: 200)
-                            HStack {
-                                Text("My Color Palettes")
-                                    .bold()
-                                    .font(.system(size: 25))
-                                Spacer()
-                            }
-                            .padding(.leading, 20)
-                            .padding(.top, 15)
-                        }
-                        
-                        
                         Spacer()
                     }
                     
@@ -127,6 +128,7 @@ struct BasicEditableProfileView: View {
                 }
             }
         }
+        
     }
 
     fileprivate func editFormView() -> some View {
@@ -142,9 +144,16 @@ struct BasicEditableProfileView: View {
             }
 
         }
+        .background(Color.clear)
+    }
+    
+    func deleteItems(at offsets: IndexSet) {
+        collection.items.remove(atOffsets: offsets)
     }
 }
 
 #Preview {
     BasicEditableProfileView(profile: Profile(firstName: "Tim", title: "Graphic Designer", city: "Cupertino"))
+        .environmentObject(Collection())
 }
+
