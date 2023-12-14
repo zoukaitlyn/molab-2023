@@ -53,6 +53,10 @@ typealias JColorNames = [JColorName]
 
 struct ColorHistoryFact: Codable {
     let name, hex, fact: String
+    
+    #if DEBUG
+    static let example = ColorHistoryFact(name: "Red", hex: "FF0000", fact: "Cochineal is a pigment of red that’s derived from a scale insect of the same name. It took around 70,000 of these bugs to get one pound of raw cochineal dye. This pigment is actually still used today in food and cosmetics under the label E120.")
+    #endif
 }
 
 typealias ColorHistory = [ColorHistoryFact]

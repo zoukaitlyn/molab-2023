@@ -11,6 +11,8 @@ struct BasicColorView: View {
 
     var body: some View {
         NavigationStack{
+            ColorHistoryRandom()
+
             List{
                 ForEach(color, id: \.name){ color in
                     NavigationLink(value: color){

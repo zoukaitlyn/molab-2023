@@ -18,16 +18,17 @@ struct AllColorsView: View {
                     }
                 }
                 .listRowSeparator(.hidden)
-//                .scrollContentBackground(.hidden)
+                //                .scrollContentBackground(.hidden)
                 .listRowInsets(.init(top: 10, leading: 30, bottom: 0, trailing: 30))
             }
             .navigationTitle("All Colors")
             .navigationDestination(for: JColorName.self){ item in
                 AllColorsDetail(item: item)
-
+                
             }
         }
     }
+    
 }
 
 #Preview {

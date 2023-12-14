@@ -12,100 +12,141 @@ struct AllColorsDetail: View {
     var color1 = hexStringToUIColor(hex: "#d3d3d3")
     
     var body: some View {
-        VStack{
-            ZStack(alignment: .leading){
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(Color(hex: item.hex))
-                    .frame(width: 350, height: 200)
-                Text(item.name)
-                    .padding(.top, 130)
-                    .padding(.leading, 20)
-                    .font(.system(size: 40))
-                    .foregroundStyle(.white)
-            }
-            VStack(alignment: .leading){
-                if let rgb = hexToRGB(hex: item.hex) {
-                    Text("RGB: (\(rgb.0), \(rgb.1), \(rgb.2))")
-                        .padding(.top, 5)
-                    Text("Hex: \(item.hex)")
-                        .padding(.top, 5)
-                    Text("Complement: (\(255-rgb.0), \(255-rgb.1), \(255-rgb.2))")
-                        .padding(.top, 5)
+        ScrollView{
+            VStack{
+                ZStack(alignment: .leading){
                     RoundedRectangle(cornerRadius: 6)
-                        .fill(Color(red: Double(255-rgb.0)/255, green: Double(255-rgb.1)/255, blue: Double(255-rgb.2)/255))
-                        .frame(width: 350, height: 50)
-                        .padding(.bottom, 10)
-                    Text("Shade Gradient")
-                    HStack{
+                        .fill(Color(hex: item.hex))
+                        .frame(width: 350, height: 200)
+                    Text(item.name)
+                        .padding(.top, 130)
+                        .padding(.leading, 20)
+                        .font(.system(size: 40))
+                        .foregroundStyle(.white)
+                }
+                VStack(alignment: .leading){
+                    if let rgb = hexToRGB(hex: item.hex) {
+                        Text("RGB: (\(rgb.0), \(rgb.1), \(rgb.2))")
+                            .padding(.top, 5)
+                        Text("Hex: \(item.hex)")
+                            .padding(.top, 5)
+                        Text("Complement: (\(255-rgb.0), \(255-rgb.1), \(255-rgb.2))")
+                            .padding(.top, 5)
                         RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0)/255.0, green: Double(rgb.1)/255.0, blue: Double(rgb.2)/255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0) * 0.9 / 255.0, green: Double(rgb.1) * 0.9 / 255.0, blue: Double(rgb.2) * 0.9 / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0) * 0.7 / 255.0, green: Double(rgb.1) * 0.7 / 255.0, blue: Double(rgb.2) * 0.7 / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0) * 0.5 / 255.0, green: Double(rgb.1) * 0.5 / 255.0, blue: Double(rgb.2) * 0.5 / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0) * 0.3 / 255.0, green: Double(rgb.1) * 0.3 / 255.0, blue: Double(rgb.2) * 0.3 / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0) * 0.1 / 255.0, green: Double(rgb.1) * 0.1 / 255.0, blue: Double(rgb.2) * 0.1 / 255.0))
-                            .frame(width: 50, height: 50)
+                            .fill(Color(red: Double(255-rgb.0)/255, green: Double(255-rgb.1)/255, blue: Double(255-rgb.2)/255))
+                            .frame(width: 350, height: 50)
+                            .padding(.bottom, 10)
+                        Text("Shade Gradient")
+                        ScrollView(.horizontal){
+                            HStack(spacing: 5){
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0)/255.0, green: Double(rgb.1)/255.0, blue: Double(rgb.2)/255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.9 / 255.0, green: Double(rgb.1) * 0.9 / 255.0, blue: Double(rgb.2) * 0.9 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.8 / 255.0, green: Double(rgb.1) * 0.8 / 255.0, blue: Double(rgb.2) * 0.8 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.7 / 255.0, green: Double(rgb.1) * 0.7 / 255.0, blue: Double(rgb.2) * 0.7 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.6 / 255.0, green: Double(rgb.1) * 0.6 / 255.0, blue: Double(rgb.2) * 0.6 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.5 / 255.0, green: Double(rgb.1) * 0.5 / 255.0, blue: Double(rgb.2) * 0.5 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.4 / 255.0, green: Double(rgb.1) * 0.4 / 255.0, blue: Double(rgb.2) * 0.4 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.3 / 255.0, green: Double(rgb.1) * 0.3 / 255.0, blue: Double(rgb.2) * 0.3 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.2 / 255.0, green: Double(rgb.1) * 0.2 / 255.0, blue: Double(rgb.2) * 0.2 / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0) * 0.1 / 255.0, green: Double(rgb.1) * 0.1 / 255.0, blue: Double(rgb.2) * 0.1 / 255.0))
+                                    .frame(width: 50, height: 50)
+                            }
+                            .padding(.bottom, 10)
+                        }
+                        .frame(width: 350)
+                        
+                        Text("Tint Gradient")
+                        
+                        ScrollView(.horizontal){
+                            HStack(spacing: 5){
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0)/255.0, green: Double(rgb.1)/255.0, blue: Double(rgb.2)/255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.1)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.1)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.1)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.2)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.2)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.2)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.3)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.3)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.3)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.4)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.4)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.4)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.5)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.5)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.5)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.6)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.6)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.6)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.7)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.7)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.7)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.8)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.8)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.8)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.9)) / 255.0,
+                                                green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.9)) / 255.0,
+                                                blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.9)) / 255.0))
+                                    .frame(width: 50, height: 50)
+                            }
+                        
+                        }
+                        .frame(width: 350)
+                        
                     }
-                    .padding(.bottom, 10)
-                    Text("Tint Gradient")
-                    HStack{
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0)/255.0, green: Double(rgb.1)/255.0, blue: Double(rgb.2)/255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.1)) / 255.0,
-                                        green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.1)) / 255.0,
-                                        blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.1)) / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.3)) / 255.0,
-                                        green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.3)) / 255.0,
-                                        blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.3)) / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.5)) / 255.0,
-                                        green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.5)) / 255.0,
-                                        blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.5)) / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.7)) / 255.0,
-                                        green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.7)) / 255.0,
-                                        blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.7)) / 255.0))
-                            .frame(width: 50, height: 50)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color(red: Double(rgb.0 + Int(Double((255 - rgb.0)) * 0.9)) / 255.0,
-                                        green: Double(rgb.1 + Int(Double((255 - rgb.1)) * 0.9)) / 255.0,
-                                        blue: Double(rgb.2 + Int(Double((255 - rgb.2)) * 0.9)) / 255.0))
-                            .frame(width: 50, height: 50)
+                    
+                    Button("Add to My Colors") {
+                        collection.add(item: item)
                     }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.black)
+                    .padding(.top, 40)
+                    .padding(.leading, 90)
 
+                    
+                    Spacer()
                 }
-                
-                Button("Add to My Colors") {
-                    collection.add(item: item)
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(.black)
-                .padding(.top, 20)
-                
-                Spacer()
+                .frame(width: 300)
             }
-            .frame(width: 300)
-            
-            
         }
-        
-
     }
 }
 

@@ -11,7 +11,6 @@ import MapKit
 struct Profile {
     var firstName: String
     var title: String
-    var city: String
 }
 
 struct BasicEditableProfileView: View {
@@ -54,7 +53,6 @@ struct BasicEditableProfileView: View {
                                 }
                                 .padding(.leading, 20)
                                 .padding(.top, 15)
-                                
                                 VStack{
                                     List{
                                         ForEach(collection.items, id: \.self){ item in
@@ -120,12 +118,6 @@ struct BasicEditableProfileView: View {
                     Spacer()
                     Text(profile.title).foregroundColor(.secondary)
                 }
-
-                HStack {
-                    Text("City:")
-                    Spacer()
-                    Text(profile.city).foregroundColor(.secondary)
-                }
             }
         }
         
@@ -139,9 +131,6 @@ struct BasicEditableProfileView: View {
             Section(header: Text("Title")) {
                 TextField("Title",text: $profile.title)
             }
-            Section(header: Text("City")) {
-                TextField("City",text: $profile.city)
-            }
 
         }
         .background(Color.clear)
@@ -153,7 +142,7 @@ struct BasicEditableProfileView: View {
 }
 
 #Preview {
-    BasicEditableProfileView(profile: Profile(firstName: "Tim", title: "Graphic Designer", city: "Cupertino"))
+    BasicEditableProfileView(profile: Profile(firstName: "Tim", title: "Graphic Designer"))
         .environmentObject(Collection())
 }
 

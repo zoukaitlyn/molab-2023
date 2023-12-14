@@ -26,6 +26,8 @@
 		1BE8F16E2AFB32F5001948D8 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8F16D2AFB32F5001948D8 /* ItemRow.swift */; };
 		1BE8F1702AFB354F001948D8 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8F16F2AFB354F001948D8 /* ItemDetail.swift */; };
 		1BE8F1722AFB37E8001948D8 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8F1712AFB37E8001948D8 /* RandomColor.swift */; };
+		1BFE37F62B2AB0A700A5F2AF /* ColorHistoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFE37F52B2AB0A700A5F2AF /* ColorHistoryDetail.swift */; };
+		1BFE37F82B2ABA9B00A5F2AF /* ColorHistoryRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFE37F72B2ABA9B00A5F2AF /* ColorHistoryRandom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		1BE8F16D2AFB32F5001948D8 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		1BE8F16F2AFB354F001948D8 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		1BE8F1712AFB37E8001948D8 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
+		1BFE37F52B2AB0A700A5F2AF /* ColorHistoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHistoryDetail.swift; sourceTree = "<group>"; };
+		1BFE37F72B2ABA9B00A5F2AF /* ColorHistoryRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHistoryRandom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				1BE8F15D2AFB2D07001948D8 /* ContentView.swift */,
 				1B275A442B05B74200B81FEB /* BasicEditableProfileView.swift */,
 				1BE8F16F2AFB354F001948D8 /* ItemDetail.swift */,
+				1BFE37F52B2AB0A700A5F2AF /* ColorHistoryDetail.swift */,
+				1BFE37F72B2ABA9B00A5F2AF /* ColorHistoryRandom.swift */,
 				1B5EB3732B212ED200ABA5C0 /* Collection.swift */,
 				1BC783D22B1800E900914900 /* MonochromaticColorTest.swift */,
 				1BC783D02B17F88000914900 /* TriadColorTest.swift */,
@@ -190,6 +196,7 @@
 				1BE8F16C2AFB30C6001948D8 /* JSONManager.swift in Sources */,
 				1BE8F15C2AFB2D07001948D8 /* ColorAppApp.swift in Sources */,
 				1BE8F1702AFB354F001948D8 /* ItemDetail.swift in Sources */,
+				1BFE37F82B2ABA9B00A5F2AF /* ColorHistoryRandom.swift in Sources */,
 				1B5EB3742B212ED200ABA5C0 /* Collection.swift in Sources */,
 				1BCA96592AFC901300E82482 /* AllColorsView.swift in Sources */,
 				1BCA965B2AFCAA2D00E82482 /* BasicColorView.swift in Sources */,
@@ -197,6 +204,7 @@
 				1B272E312AFC08F3005EFAC9 /* AllColorsItem.swift in Sources */,
 				1BCA965D2AFCAC0800E82482 /* AllColorsDetail.swift in Sources */,
 				1BC783D12B17F88000914900 /* TriadColorTest.swift in Sources */,
+				1BFE37F62B2AB0A700A5F2AF /* ColorHistoryDetail.swift in Sources */,
 				1BE8F16E2AFB32F5001948D8 /* ItemRow.swift in Sources */,
 				1BC783D32B1800E900914900 /* MonochromaticColorTest.swift in Sources */,
 			);
@@ -340,6 +348,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,6 +378,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

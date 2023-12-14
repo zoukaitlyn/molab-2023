@@ -20,13 +20,14 @@ struct ContentView: View {
                 .tabItem {
                     Label("Basic", systemImage: "circle.fill")
                 }
-            BasicEditableProfileView(profile: Profile(firstName: "Tim", title: "Graphic Designer", city: "Cupertino"))
+            BasicEditableProfileView(profile: Profile(firstName: "Tim", title: "Graphic Designer"))
                 .tabItem {
                     Label("Profile", systemImage: "circle.fill")
                 }
         }
     }
 }
+
 
 #Preview {
     ContentView()
